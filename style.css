@@ -49,6 +49,23 @@ nav a{
     text-decoration: none;
     font-weight: 600;
 }
+/* Header button */
+.header-button{
+    margin-left: 24;
+    padding: 8px 16px;
+    border: 2px solid;
+    border-radius: 10px;
+    background:transparent;
+    color: inherit;
+    font:inherit;
+    font-weight: 600;
+    cursor: pointer;
+
+ }
+
+ .menu-button {
+    display: none;
+ }
 
 /* sections*/
 section{
@@ -217,13 +234,28 @@ h2{
 /* phone */
 @media (max-width: 700px){
     .site-header{
-        flex-direction: column;
-        gap: 12px;
+        flex-wrap: wrap;
     }
-
-    nav a{
-        margin: 0 12px;
+    
+    .menu-button{
+        display: block;
     }
+    nav {
+        display: none;
+        order:1;
+        width: 100%;
+        margin-top: 12px;
+    }
+     nav .open{
+        display: block;
+     }
+     
+     nav a{
+        display: block;
+        margin: 0;
+        padding: 12px 0;
+        border-top: 1px solid rgb(128,128,128,0.3 );
+     }
     
     .hero{
         flex-direction: column-reverse;
